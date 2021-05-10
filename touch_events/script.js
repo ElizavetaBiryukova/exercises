@@ -1,8 +1,8 @@
 'use strict';
 
-// touchstart - Коснулись экрана
-// touchend - Палец убрали
-// touchmove - Двигаем пальцем
+// touchstart
+// touchend 
+// touchmove 
 // touchenter 
 // touchleave
 // touchcancel
