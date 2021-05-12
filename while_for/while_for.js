@@ -154,3 +154,26 @@ for (let i = 0; i < numbersEl.length; i++) {
         console.log(numbersEl[i]);
     }
 }
+
+// 17 Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9.
+//  С помощью цикла for создайте строку '-1-2-3-4-5-6-7-8-9-'.
+
+const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+for (let i = 0; i < arrayNumbers.length; i++) {
+    let arrayString = '-' + arrayNumbers[i];
+    arrayString.toString();
+    console.log(arrayString);
+}
+
+// arrayNumbers.push('');
+// arrayNumbers.unshift('');
+// let arrayString = arrayNumbers.join('-');
+// console.log(arrayString);
+
+// 18 Составьте массив дней недели.
+//  С помощью цикла for выведите все дни недели, а выходные дни выведите жирным.
+let out = document.querySelector('.out');
+const days = ['пон', 'вт', 'ср', 'чт', 'пт', 'сб', 'воскр'];
+for (let i = 0; i < days.length; i++) {
+    out.innerHTML = `${a.slice(0, 5)},<strong>${a.slice(5, 7)}</strong>`;
+}
