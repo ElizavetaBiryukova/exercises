@@ -31,13 +31,16 @@ const obj = {
 obj.sum();
 
 
-//3) 
+//3) this в конструкторах и классах - это новый экземпляр объекта
 
 function User(name, id) {
     this.name = name;
     this.id = id;
     this.human = true;
-
+    this.hello = function() {
+        console.log(`Hello ${this.name}`);
+    };
 }
+
 
 const alex = new User('Alex', 28);
