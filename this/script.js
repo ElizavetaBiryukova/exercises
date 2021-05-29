@@ -46,21 +46,43 @@
 // const alex = new User('Alex', 28);
 
 //4) Ручная привязка this: call, apply, bind
-function sayName(surname) {
-    console.log(this);
-    console.log(this.name + surname);
-}
+// function sayName(surname) {
+//     console.log(this);
+//     console.log(this.name + surname);
+// }
 
-const user = {
-    name: 'John',
+// const user = {
+//     name: 'John',
+// };
+
+// sayName.call(user, ' Smith');
+// sayName.apply(user, [' Smith']);
+
+// function count(num) {
+//     return this*num;
+// }
+
+// const double = count.bind(2);
+// console.log(double(3));
+
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function () {
+    // console.log(this);
+    this.style.backgroundColor = 'red';
+});
+
+const obj = {
+    num: 5,
+    sayNumber: function() {
+        const say = () => {
+            console.log(this);
+        };
+        say();
+    }
 };
 
-sayName.call(user, ' Smith');
-sayName.apply(user, [' Smith']);
+obj.sayNumber();
 
-function count(num) {
-    return this*num;
-}
-
-const double = count.bind(2);
-console.log(double(3));
+const double = a => a * 2;
+console.log(double(4));
