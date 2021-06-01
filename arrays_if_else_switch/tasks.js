@@ -278,3 +278,42 @@ if (string[0] === 'a') {
 } else {
     console.log('Нет');
 }
+
+
+// 18 Дан массив с числами. Проверьте, что в этом массиве есть число 5. 
+// Если есть - выведите 'да', а если нет - выведите 'нет'.
+
+const arrNumbers = [1, 2, 3, 4, 5, 6];
+let flag = false;
+
+for (let i = 1; i <= arrNumbers.length; i++) {
+    if (arrNumbers[i] == 5) {
+        flag = true;
+        break;
+    }
+}
+
+if (flag === true) {
+    console.log('да');
+} else {
+    console.log('нет');
+}
+
+// 19 Дано число, например 31. Проверьте, что это число не делится ни на одно 
+// другое число кроме себя самого и единицы. То есть в нашем случае нужно проверить,
+//  что число 31 не делится на все числа от 2 до 30. Если число не делится
+//   - выведите 'false', а если делится - выведите 'true'.
+const num = 31;
+let flagNum = false;
+for (var i = 2; i < num; i++) {
+    if (num % i == 0) {
+        flagNum = true;
+        break;
+    }
+}
+
+if (flagNum == true) {
+    console.log('true');
+} else {
+    console.log('false');
+}
