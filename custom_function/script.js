@@ -56,3 +56,70 @@ function week(day) {
 }
 
 console.log(week(3));
+
+
+// Сделайте функцию, которая параметрами принимает 2 числа.
+//  Если эти числа равны - пусть функция вернет true, а если не равны - false.
+
+function num(number1, number2) {
+    if (number1 === number2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(num(2, 3));
+
+// Сделайте функцию, которая параметрами принимает 2 числа. 
+// Если их сумма больше 10 - пусть функция вернет true, а если нет - false.
+
+function numbers(number1, number2) {
+    if ((number1 + number2) > 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(numbers(12, 3));
+
+// Сделайте функцию, которая параметром принимает число и проверяет - 
+// отрицательное оно или нет. Если отрицательное - пусть функция вернет true,
+//  а если нет - false.
+
+function number(num) {
+    if (num < 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(number(-12));
+
+// С помощью цикла for сформируйте строку 
+// '123456789' и запишите ее в переменную str.
+
+let str = '';
+for (let i = 1; i < 10; i++) {
+    str = str + i;
+}
+console.log(str);
+
+// С помощью цикла for сформируйте строку 
+// '987654321' и запишите ее в переменную string.
+
+let string = '';
+for (let i = 9; i > 0; i--) {
+    string = string + i;
+}
+console.log(string);
+
+// С помощью цикла for сформируйте строку
+//  '-1-2-3-4-5-6-7-8-9-' и запишите ее в переменную str.
+var str2 = '';
+for (var i = 1; i < 10; i++) {
+    str2 = str2 + i + '-';
+}
+console.log(str2);
