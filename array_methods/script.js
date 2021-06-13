@@ -21,3 +21,13 @@ const answers = ['IvAn', 'AnnA', 'Hello'];
 const result = answers.map(item => item.toLowerCase());
 
 console.log(result);
+
+//every/some
+
+const some = [4, 'ddf', 'fkfk'];
+
+//проверяем есть ли у нас хоть одно число
+
+// console.log(some.some(item => typeof(item) === 'number'));
+
+console.log(some.every(item => typeof(item) === 'number'));
