@@ -30,4 +30,17 @@ const some = [4, 'ddf', 'fkfk'];
 
 // console.log(some.some(item => typeof(item) === 'number'));
 
-console.log(some.every(item => typeof(item) === 'number'));
+console.log(some.every(item => typeof (item) === 'number'));
+
+
+//reduce
+
+const arr = [4, 5, 1, 3, 2, 6];
+
+const res = arr.reduce((sum, current) => sum + current, 3);
+
+
+// const arr = ['apple', 'pear', 'plum'];
+
+// const res = arr.reduce((sum, current) => `${sum}, ${current}`);
+// console.log(res);
