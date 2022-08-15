@@ -86,3 +86,19 @@ console.log(7);
 // В очереди макрозадач получается теперь: console.log(2); console.log(6); console.log(4).
 // Очередь микрозадач полностью выполнена, срабатывает очередь макрозадач. Она выведет 2, 6, 4.
 // Получается вывод 1 7 3 5 2 6 4.
+
+console.log(1);
+
+setTimeout(() => console.log(2));
+
+Promise.reject(3).catch(console.log);
+
+new Promise(resolve => setTimeout(resolve)).then(() => console.log(4));
+
+Promise.resolve(5).then(console.log);
+
+console.log(6);
+
+setTimeout(() => console.log(7),0);
+
+// 1 6 3 5 2 4 7
