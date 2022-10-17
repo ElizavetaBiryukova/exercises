@@ -17,7 +17,7 @@ function betterThanAverage(classPoints, yourPoints) {
         sum += value;
     });
     let average = sum / classPoints.length - 1;
-    console.log(average);
+
     if (average > yourPoints) {
         return false;
     } else {
@@ -94,4 +94,74 @@ function descendingOrder(n) {
     return parseInt(String(n).split('').sort().reverse().join(''));
 }
 
-console.log(descendingOrder(500));
+// console.log(descendingOrder(500));
+
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, 
+// neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+    let string = str.replaceAll(/[aeiou]/gi, "");
+    return string;
+}
+
+// console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"));
+
+// Complete the solution so that it returns true if the first argument(string)
+//  passed in ends with the 2nd argument (also a string).
+function solution(str, ending) {
+    return str.endsWith(ending);
+
+}
+
+// console.log(solution('kgkg', 'g'));
+
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwo
+// rk has 'm' pages.
+
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+function paperwork(n, m) {
+    if (n < 0 || m < 0) {
+        return 0;
+    } else {
+        return n * m;
+    }
+}
+
+// You are going to be given a word. Your job is to 
+// return the middle character of the word. If the word's 
+// length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+function getMiddle(s) {
+    let number = s.length / 2;
+    let res;
+    if (s.length % 2 == 0) {
+        res = s.slice(number - 1, number + 1);
+        return res;
+    } else {
+        res = s.slice(Math.floor(number), Math.floor(number) + 1);
+        return res;
+    }
+}
+
+// console.log(getMiddle("middle"));
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+function sumMix(x){
+    let numbersArr = x.map((e) => Number(e));
+    
+    numbersArr.forEach;
+    }
+
+    console.log(sumMix([9, 3, '7', '3']));
