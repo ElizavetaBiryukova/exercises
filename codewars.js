@@ -158,10 +158,14 @@ function getMiddle(s) {
 
 // Return your answer as a number.
 
-function sumMix(x){
+function sumMix(x) {
     let numbersArr = x.map((e) => Number(e));
-    
-    numbersArr.forEach;
-    }
+    let sum = 0;
+    numbersArr.forEach(item => {
+        sum += item;
+    });
+    return sum;
 
-    console.log(sumMix([9, 3, '7', '3']));
+}
+
+// console.log(sumMix([9, 3, '7', '3']));
