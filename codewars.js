@@ -169,3 +169,42 @@ function sumMix(x) {
 }
 
 // console.log(sumMix([9, 3, '7', '3']));
+
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num) {
+    let array = num.toString().split("").map((el) => el * el).join("");
+
+    return Number(array);
+}
+
+// console.log(squareDigits(9155));
+
+// Consider an array/list of sheep where some sheep may be missing from their place. 
+// We need a function that counts the number of sheep present in the array (true means present).
+
+// For example,
+
+let array = [true, true, true, false,
+    true, true, true, true,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true
+];
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined
+
+function countSheeps(arrayOfSheep) {
+    return arrayOfSheep.filter(x => x == true).length;
+}
+
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean);
+}
+// console.log(countSheeps(array));
