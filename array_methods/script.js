@@ -45,15 +45,44 @@ const res = arr.reduce((sum, current) => sum + current, 3);
 // const res = arr.reduce((sum, current) => `${sum}, ${current}`);
 // console.log(res);
 
-const obj = {
-    ivan: 'persone',
-    ann: 'persone',
-    dog: 'animal',
-    cat: 'animal'
-};
+// const obj = {
+//     ivan: 'persone',
+//     ann: 'persone',
+//     dog: 'animal',
+//     cat: 'animal'
+// };
 
-const newArr = Object.entries(obj)
-.filter(item => item[1] === 'persone')
-.map(item => item[0]);
+// const newArr = Object.entries(obj)
+//     .filter(item => item[1] === 'persone')
+//     .map(item => item[0]);
 
-console.log(newArr);
+// console.log(newArr);
+
+
+
+// const styles = ["Джаз", "Блюз"];
+// styles.push("Рок-н-ролл");
+// styles[Math.floor((styles.length - 1) / 2)] = "Классика";
+// alert( styles.shift() );
+// styles.unshift("Рэп", "Регги");
+
+// console.log(styles)
+
+function likes(names) {
+    let str = '';
+    if (names.length > 3) {
+        str = `${names.slice(0, 2).join(', ')} and ${names.slice(2).length} others`
+    } else if (names.length === 3) {
+        str = `${names.slice(0, 2).join(', ')} and ${names.slice(2, 3).join(',')}`
+    } else if (names.length === 2) {
+        str = `${names.join(' and ')}`
+    } else if (names.length === 1) {
+        str = `${names.join('')}`
+    } else {
+        str = 'no one'
+    }
+
+    return `${str} like this`
+}
+
+console.log(likes(["Alex", "Jacob", "Mark", "Max"]));

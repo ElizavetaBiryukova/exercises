@@ -3,12 +3,12 @@ setTimeout(function timeout() {
     console.log('Таймаут');
 }, 0);
 
-let p = new Promise(function(resolve, reject) {
+let p = new Promise(function (resolve, reject) {
     console.log('Создание промиса');
     resolve();
 });
 
-p.then(function(){
+p.then(function () {
     console.log('Обработка промиса');
 });
 
@@ -99,7 +99,26 @@ Promise.resolve(5).then(console.log);
 
 console.log(6);
 
-setTimeout(() => console.log(7),0);
+setTimeout(() => console.log(7), 0);
 
 // 1 6 3 5 2 4 7
 
+function summ(a, b) {
+    if (a < -32000) {
+        return false
+    }
+    if (b < -32000) {
+        return false
+    }
+    if (a > 32000) {
+        return false
+    }
+    if (b > 32000) {
+        return false
+    } else {
+        const result = a + b;
+        return result;
+    }
+};
+
+console.log(summ(300, 350));
