@@ -86,3 +86,18 @@ function likes(names) {
 }
 
 console.log(likes(["Alex", "Jacob", "Mark", "Max"]));
+
+
+function toWeirdCase(string) {
+
+    return string.split(' ').map((word) => {
+
+        return word.split('').map((el, i) => {
+            return (i == 0 || !(i % 2)) ? el.toUpperCase() : el.toLowerCase();
+
+        }).join('');
+
+    }).join(' ');
+}
+
+console.log(toWeirdCase("string fgf"))
