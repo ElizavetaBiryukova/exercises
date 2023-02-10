@@ -202,7 +202,7 @@ function strCount(obj) {
 
     for (let key of obj) {
         let c = obj[key];
-       
+
         switch (typeof c) {
             case "object":
                 i += strCount(c);
@@ -218,10 +218,30 @@ function strCount(obj) {
 
 
 
-console.log(strCount({
-    first: "1",
-    second: "2",
-    third: false,
-    fourth: ["anytime", 2, 3, 4],
-    fifth: null
-}))
+// console.log(strCount({
+//     first: "1",
+//     second: "2",
+//     third: false,
+//     fourth: ["anytime", 2, 3, 4],
+//     fifth: null
+// }))
+
+function bingo(ticket, win) {
+    let arr = [];
+    for (let i = 0; i < ticket.length; i++) {
+        for (let j = 0; j < ticket[i].length - 1; j++) {
+            [...new Set(ticket[i][j])].map(el => {
+                if (el.charCodeAt() == ticket[i][1]) {
+                    return arr.push(el)
+                }
+            })
+        }
+    }
+    if (arr.length >= win) {
+        return 'Winner!'
+    } else {
+        return 'Loser!'
+    }
+}
+
+console.log(bingo([['AABC', 65], ['HGR', 74], ['BYHT', 74]], 2))
